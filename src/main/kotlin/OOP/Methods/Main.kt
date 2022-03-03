@@ -1,4 +1,4 @@
-package OOP.Constructor
+package OOP.Methods
 
 fun main(args: Array<String>) {
 
