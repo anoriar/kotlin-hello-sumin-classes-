@@ -3,6 +3,11 @@ package FunctionalProgramming
 fun main(args: Array<String>) {
     val number = 4
     println(number.isPrimeNumber())
+
+    val obj: String = "test"
+    myWith(obj) {
+        println(obj.length)
+    }
 }
 
 fun Int.isPrimeNumber(): Boolean {
@@ -15,4 +20,8 @@ fun Int.isPrimeNumber(): Boolean {
         }
     }
     return true
+}
+
+inline fun <T, R> myWith(obj: T, operation: T.() -> R): R {
+    return obj.operation()
 }
