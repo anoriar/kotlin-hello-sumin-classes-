@@ -1,4 +1,4 @@
-package JetBrains.ParkingLot
+package JetBrains.ParkingLot.First
 
 val freeSpots: MutableList<Int> = (1..20).toMutableList()
 
