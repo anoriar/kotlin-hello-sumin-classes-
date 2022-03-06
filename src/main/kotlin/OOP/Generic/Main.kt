@@ -1,7 +1,7 @@
 package OOP.Generic
 
 fun main(args: Array<String>) {
-    val myArrayList: MyArrayList<String> = MyArrayList()
+    val myArrayList: MyArrayList<String> = MyArrayList.myArrayListOf("test", "test2")
     myArrayList.add("Test")
     myArrayList.add("Test2")
     myArrayList.add("Test3")
