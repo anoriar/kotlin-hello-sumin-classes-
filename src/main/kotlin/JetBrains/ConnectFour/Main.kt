@@ -12,6 +12,7 @@ fun main() {
     game = Game(firstPlayer, secondPlayer, board)
     println("${game.firstPlayer.name} VS ${game.secondPlayer.name}")
     println("${game.board.rows} X ${game.board.columns} board")
+    printBoard()
 }
 
 fun createBoard(): Board {
@@ -44,4 +45,21 @@ fun createBoard(): Board {
             println(ex.message)
         }
     }
+}
+
+fun printBoard() {
+//        HeaderRaw
+    println(" " + Array<Int>(game.board.columns) { it + 1 }.joinToString(" "))
+
+//        BoardRaws
+    for (i in 1..game.board.rows) {
+        val rawSymbols: ArrayList<String> = arrayListOf<String>()
+        for (j in 1..game.board.columns + 1) {
+            rawSymbols.add("║")
+        }
+        println(rawSymbols.joinToString(" "))
+    }
+
+//    Last Raw
+    println("╚═" + Array<String>(game.board.columns - 1) { "╩" }.joinToString("═") + "═╝")
 }
